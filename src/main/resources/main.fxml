@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane alignment="center" hgap="10" maxHeight="700.0" maxWidth="700.0" minHeight="700.0" minWidth="700.0"
+          prefHeight="700.0" prefWidth="700.0" vgap="10" xmlns="http://javafx.com/javafx/8"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <children>
+        <AnchorPane maxHeight="700.0" maxWidth="700.0" minHeight="700.0" minWidth="700.0" prefHeight="700.0"
+                    prefWidth="700.0">
+            <children>
+                <MenuBar prefHeight="32.0" prefWidth="475.0" AnchorPane.bottomAnchor="668.0" AnchorPane.leftAnchor="0.0"
+                         AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Главная страница">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#main" text="Главная страница"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Новости">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#news" text="Посмотреть новости"/>
+                            </items>
+                        </Menu>
+                        <Menu fx:id="addNewsMenu" mnemonicParsing="false" text="Добавить новость" visible="false">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#addNews" text="Добавить новость"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <MenuBar layoutX="475.0" layoutY="-2.0" prefHeight="32.0" prefWidth="227.0"
+                         AnchorPane.bottomAnchor="668.0" AnchorPane.leftAnchor="550.0" AnchorPane.rightAnchor="0.0"
+                         AnchorPane.topAnchor="0.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Авторизация">
+                            <items>
+                                <MenuItem fx:id="loginMenuItem" mnemonicParsing="false" onAction="#login" text="Войти"/>
+                                <MenuItem fx:id="logoutMenuItem" mnemonicParsing="false" onAction="#logout" text="Выйти"
+                                          visible="false"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <AnchorPane fx:id="body" layoutX="14.0" layoutY="41.0" prefHeight="652.0" prefWidth="677.0"
+                            AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0"
+                            AnchorPane.topAnchor="160.0">
+                    <children>
+                        <Label contentDisplay="TOP" layoutX="14.0" layoutY="14.0"
+                               text="Добро пожаловать в клиентское приложения для СRM АЗС ITIS oil."
+                               textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="15.0"
+                               AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+                            <font>
+                                <Font size="36.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <VBox layoutX="15.0" layoutY="45.0" prefHeight="115.0" spacing="5.0" AnchorPane.topAnchor="45.0">
+                    <children>
+                        <Label fx:id="currentUsernameLabel" alignment="TOP_RIGHT" prefHeight="55.0"
+                               AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="45.0">
+                            <font>
+                                <Font size="36.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="pageNameLabel" alignment="TOP_RIGHT" layoutX="25.0" layoutY="55.0"
+                               prefHeight="55.0">
+                            <font>
+                                <Font size="36.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+    <columnConstraints>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+    </rowConstraints>
+</GridPane>
